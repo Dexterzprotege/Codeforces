@@ -1,0 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+public class Contests {
+
+   
+    public static void main(String[] args) throws IOException {
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+
+        String entry = input.readLine();
+        entry = entry.toLowerCase();
+        entry = entry.replace("a", "");
+        entry = entry.replace("e", "");
+        entry = entry.replace("i", "");
+        entry = entry.replace("o", "");
+        entry = entry.replace("u", "");
+        entry = entry.replace("y", "");
+        String result = "";
+        for ( int i = 0; i < entry.length(); i++ )
+        {
+            result += ".";  
+            result += entry.substring(i, i+1);
+               
+        }
+        System.out.println(result);
+
+        
+    }
+}
